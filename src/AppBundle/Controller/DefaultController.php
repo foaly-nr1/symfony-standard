@@ -5,6 +5,7 @@ namespace AppBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use AppBundle\Form\Type\InquiryType;
 
 class DefaultController extends Controller
 {
@@ -13,9 +14,16 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        // replace this example code with whatever you need
-        return $this->render('default/index.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
+        $form = $this->createForm(InquiryType::class, null, [
+            'method' => 'POST',
+        ]);
+
+        if($request->isMethod('POST')) {
+            $form->handleRequest($request);
+        }
+
+        return $this->render('AppBundle::form.html.twig', [
+            'form' => $form->createView(),
         ]);
     }
 }
