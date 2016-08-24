@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "020384425762b0b937d2ce63876b0d0a",
-    "content-hash": "75ed400d6336ecbb8e70528cc845bce2",
+    "hash": "b5aa617b9ae348f81f8d42139622e8dc",
+    "content-hash": "16acb5d33cbec73f444c847d8734376f",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -701,38 +701,37 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "v2.5.4",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "bc4ddbfb0114cb33438cc811c9a740d8aa304aab"
+                "reference": "31a0c02b066764ec7b55eedc5f3cab78235a4e4b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/bc4ddbfb0114cb33438cc811c9a740d8aa304aab",
-                "reference": "bc4ddbfb0114cb33438cc811c9a740d8aa304aab",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/31a0c02b066764ec7b55eedc5f3cab78235a4e4b",
+                "reference": "31a0c02b066764ec7b55eedc5f3cab78235a4e4b",
                 "shasum": ""
             },
             "require": {
                 "doctrine/cache": "~1.4",
                 "doctrine/collections": "~1.2",
                 "doctrine/common": ">=2.5-dev,<2.7-dev",
-                "doctrine/dbal": ">=2.5-dev,<2.6-dev",
+                "doctrine/dbal": ">=2.5-dev,<2.7-dev",
                 "doctrine/instantiator": "~1.0.1",
                 "ext-pdo": "*",
-                "php": ">=5.4",
+                "php": "^5.6 || ^7.0",
                 "symfony/console": "~2.5|~3.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.0",
+                "phpunit/phpunit": "^5.4",
                 "symfony/yaml": "~2.3|~3.0"
             },
             "suggest": {
                 "symfony/yaml": "If you want to use YAML Metadata Mapping Driver"
             },
             "bin": [
-                "bin/doctrine",
-                "bin/doctrine.php"
+                "bin/doctrine"
             ],
             "type": "library",
             "extra": {
@@ -741,8 +740,8 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Doctrine\\ORM\\": "lib/"
+                "psr-4": {
+                    "Doctrine\\ORM\\": "lib/Doctrine/ORM"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -765,6 +764,10 @@
                 {
                     "name": "Jonathan Wage",
                     "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com"
                 }
             ],
             "description": "Object-Relational-Mapper for PHP",
@@ -773,7 +776,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2016-01-05 21:34:58"
+            "time": "2016-07-31 01:19:42"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -1757,12 +1760,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "f2200f7cadbcd0ee8090917b5562ba7e8fbc7a9b"
+                "reference": "df8cf70673c5bcc1b25a480f34106a4061734b40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/f2200f7cadbcd0ee8090917b5562ba7e8fbc7a9b",
-                "reference": "f2200f7cadbcd0ee8090917b5562ba7e8fbc7a9b",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/df8cf70673c5bcc1b25a480f34106a4061734b40",
+                "reference": "df8cf70673c5bcc1b25a480f34106a4061734b40",
                 "shasum": ""
             },
             "require": {
@@ -1886,7 +1889,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2016-08-17 15:35:28"
+            "time": "2016-08-24 10:53:01"
         },
         {
             "name": "twig/twig",
@@ -2062,7 +2065,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "symfony/symfony": 20
+        "symfony/symfony": 20,
+        "doctrine/orm": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
@@ -2071,6 +2075,6 @@
     },
     "platform-dev": [],
     "platform-overrides": {
-        "php": "5.5.9"
+        "php": "7.0"
     }
 }

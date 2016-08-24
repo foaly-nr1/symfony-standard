@@ -13,7 +13,7 @@
     "require": {
         "php": ">=5.5.9",
         "symfony/symfony": "3.2.x-dev",
-        "doctrine/orm": "^2.5",
+        "doctrine/orm": "2.6.x-dev",
         "doctrine/doctrine-bundle": "^1.6",
         "doctrine/doctrine-cache-bundle": "^1.2",
         "symfony/swiftmailer-bundle": "^2.3",
@@ -45,7 +45,7 @@
     },
     "config": {
         "platform": {
-            "php": "5.5.9"
+            "php": "7.0"
         }
     },
     "extra": {
